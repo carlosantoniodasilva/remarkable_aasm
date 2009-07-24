@@ -1,0 +1,11 @@
+pt:
+  remarkable:
+    aasm:
+      aasm:
+        description: "agir como aasm com o atributo xxxxxxxxx"
+        expectations:
+          aasm_column: "estivesse configurado como aasm com o atributo xxxxxxxxx"
+          aasm_initial_state: "estivesse que o estado inicial fosse xxxxxxxxx, obtive yyyy"
+          aasm_states: "possuísse os estados xxxxxxxx, possui yyyyy"
+          aasm_events: "possuísse os eventos xxxxxxxx, possui yyyyy"
+
