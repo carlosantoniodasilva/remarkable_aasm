@@ -1,7 +1,11 @@
 en:
   remarkable:
-    <%= name %>: 
-      have_a_name: 
-        description: "should have a name"
-        expectations: 
-          has_a_name: "{{subject_name}} should have a name {{attribute}}"
+    aasm:
+      aasm:
+        description: "acts as aasm with attribute {{name}}"
+        expectations:
+          aasm_column: "to be configured as aasm with attribute {{name}}"
+          aasm_initial_state: "to have initial state {{initial_state}}, got {{actual}}"
+          aasm_states: "to have states {{states}}, got {{actual}}"
+          aasm_events: "to have events {{events}}, got {{actual}}"
+

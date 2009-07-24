@@ -22,14 +22,16 @@ module Remarkable
 
           def aasm_initial_state?
             return true unless @options.key?(:initial_state)
-            subject_class.aasm_initial_state == @options[:initial_state]
+            initial_state = subject_class.aasm_initial_state
+            return initial_state == @options[:initial_state], :actual => initial_state.inspect
           end
 
           def aasm_states?
             return true unless @options.key?(:states)
 
+            aasm_states = subject_class.aasm_states.collect{|state| state.name}
             Array(@options[:states]).to_a.each do |state|
-              return false unless subject_class.aasm_states.include?(state)
+              return false, :actual => aasm_states.inspect unless aasm_states.include?(state)
             end
 
             true
@@ -38,8 +40,9 @@ module Remarkable
           def aasm_events?
             return true unless @options.key?(:events)
 
+            aasm_events = subject_class.aasm_events.keys
             Array(@options[:events]).each do |event|
-              return false unless subject_class.aasm_events.keys.include?(event)
+              return false, :actual => aasm_events.inspect unless aasm_events.include?(event)
             end
 
             true
