@@ -20,6 +20,16 @@ h2. USAGE:
   </code>
 </pre>
 
+h2. AUTHOR:
+
+Carlos A. da Silva
+carlosantoniodasilva@gmail.com
+http://carlosantoniodasilva.wordpress.com
+
+h2. CREDITS:
+
+Thanks to Diego Carrion (dcrec1) for his amazing remarkable_plugin and others remarkable extensions.
+
 h2. LICENSE:
 
 (The MIT License)
